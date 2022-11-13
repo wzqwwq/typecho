@@ -156,7 +156,7 @@ class Admin extends Contents
         $this->countSql = clone $select;
 
         /** 提交查询 */
-        $select->order('table.contents.cid', Db::SORT_DESC)
+        $select->order('table.contents.created', Db::SORT_DESC)
             ->page($this->currentPage, $this->parameter->pageSize);
 
         $this->db->fetchAll($select, [$this, 'push']);

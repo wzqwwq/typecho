@@ -300,7 +300,7 @@ class Edit extends Contents implements ActionInterface
             Notice::alloc()->highlight($this->theId);
 
             /** 获取页面偏移 */
-            $pageQuery = $this->getPageOffsetQuery($this->cid);
+            $pageQuery = $this->getPageOffsetQuery($this->created);
 
             /** 页面跳转 */
             $this->response->redirect(Common::url('manage-posts.php?' . $pageQuery, $this->options->adminUrl));
